@@ -168,8 +168,6 @@ function removeFood(value){
     }else{
 
         // UNTUK MATIKAN CARTLIST
-
-        
         cartlist.setAttribute('style', 'display:none');
     }
     
@@ -253,10 +251,8 @@ function generateData(){
 
     let totalhr = document.createElement('hr');
     totalDiv.appendChild(totalhr);
-    //console.log(totalDiv);
     cartList.appendChild(totalDiv);
-
-    //console.log('BelumMasuk');
+  
     for(var x =0; x<cart.length; x++){
         
         let name = cart[x].name;
@@ -292,7 +288,6 @@ function generateData(){
         buttonCancel.setAttribute('onclick', 'removeFood(this.value)');
         buttonCancel.innerHTML = '<i class="fas fa-trash"></i> Hapus';
         divCardx.appendChild(buttonCancel);
-        //console.log(divCardx);
     
         cartList.appendChild(divCardx);
     }
@@ -307,8 +302,6 @@ function generateData(){
     divbutton.appendChild(buttonOrder);
     cartList.appendChild(divbutton);
 
-
-  
 
 }
 generateData()
