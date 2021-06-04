@@ -98,8 +98,8 @@ function orderFood(){
         var cartList = document.getElementById('cartList');
 
         // UNTUK MATIKAN CARTLIST
-        //cartList.setAttribute('style','display:none');
-        alert(`Pesanan telah diterima, Mohon menunggu, Total Harga : Rp.${toRupiah(totalHargaMakanan)},- `);
+        cartList.setAttribute('style','display:none');
+        alert(`Pesanan telah diterima, Mohon menunggu, Total Harga : Rp ${toRupiah(totalHargaMakanan)},00`);
         cart.push(totalHargaMakanan);
         pembelian.push(cart);
         totalHargaMakanan = 0;
@@ -115,13 +115,13 @@ function addtoCart(index) {
     var hasExist = false;
     var hasEmpty = false;
     if(food[index].stok <= 0){
-        alert(`Stok tidak cukup`);
+        alert(`${food[index].name} habis, silahkan pesan menu lainnya.`);
         hasEmpty = true;
     }
     for(var i = 0; i<cart.length; i++){
         if(food[index].name === cart[i].name){
             if(food[index].stok - cart[i].jumlah <=0){
-                alert(`Stok tidak cukup`);
+                alert(`${food[index].name} habis, silahkan pesan menu lainnya.`);
                 hasEmpty = true;
                 break;
             }else{
@@ -168,9 +168,7 @@ function removeFood(value){
     }else{
 
         // UNTUK MATIKAN CARTLIST
-
-        
-        //cartlist.setAttribute('style', 'display:none');
+        cartlist.setAttribute('style', 'display:none');
     }
     
  
@@ -230,7 +228,7 @@ function generateData(){
         divAction.classList.add('action');
 
         let spanData = document.createElement('span');
-        spanData.innerHTML = `${toRupiah(harga)} | Stok : ${stok}`;
+        spanData.innerHTML = `Rp ${toRupiah(harga)},00 | Stok : ${stok}`;
         divAction.appendChild(spanData);
 
         let buttonAdd = document.createElement('button');
@@ -248,15 +246,13 @@ function generateData(){
     totalDiv.classList.add('total');
 
     let totalh1 = document.createElement('h1');
-    totalh1.innerHTML = `TOTAL : Rp.${toRupiah(totalHargaMakanan)},00`;
+    totalh1.innerHTML = `TOTAL : Rp ${toRupiah(totalHargaMakanan)},00`;
     totalDiv.appendChild(totalh1);
 
     let totalhr = document.createElement('hr');
     totalDiv.appendChild(totalhr);
-    console.log(totalDiv);
     cartList.appendChild(totalDiv);
-
-    console.log('BelumMasuk');
+  
     for(var x =0; x<cart.length; x++){
         
         let name = cart[x].name;
@@ -281,7 +277,7 @@ function generateData(){
         divCardDetail.appendChild(foodName);
 
         let foodJumlah = document.createElement('span');
-        foodJumlah.innerHTML = jumlah;
+        foodJumlah.innerHTML = `${jumlah}`;
         divCardDetail.appendChild(foodJumlah);
         
         divCardx.appendChild(divCardDetail);
@@ -292,7 +288,6 @@ function generateData(){
         buttonCancel.setAttribute('onclick', 'removeFood(this.value)');
         buttonCancel.innerHTML = '<i class="fas fa-trash"></i> Hapus';
         divCardx.appendChild(buttonCancel);
-        console.log(divCardx);
     
         cartList.appendChild(divCardx);
     }
@@ -307,8 +302,6 @@ function generateData(){
     divbutton.appendChild(buttonOrder);
     cartList.appendChild(divbutton);
 
-
-  
 
 }
 generateData()
