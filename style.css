@@ -95,9 +95,18 @@ body {
 
 .card-order p {
   padding: 10px;
-  font-size: 18px;
+  font-size: 17px;
+  width: 70%;
   font-weight: 500;
   color: #4e4e4e;
+}
+
+.card-order span {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #4e4e4e;
+  width: 1%;
 }
 
 .card-order button {
