@@ -6,3 +6,6 @@ Warteq Bemo merupakan aplikasi pemesanan makanan direstoran kami. Pelanggan dapa
 
 ### Preview 1
 ![image](https://github.com/abdanzamzam/warteg-bemo/blob/main/Screenshot%201.png)
+
+### Preview 1
+![image](https://github.com/abdanzamzam/warteg-bemo/blob/main/Screenshot%202.png)
