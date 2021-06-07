@@ -3,7 +3,8 @@
 Warteq Bemo merupakan aplikasi pemesanan makanan direstoran kami. Pelanggan dapat langsung memesan makanan melalui layar monitor disetiap meja. Kemudian pelayan akan segera menghampiri pelanggan untuk mengantarkan pesanan yang telah dipesan.
 
 *Note: aplikasi ini dibuat dalam rangka pembelajaran/ bukan produksi
-Demo ![url](https://abdanzamzam.github.io/warteg-bemo/index.html)
+
+Demo: [url](https://abdanzamzam.github.io/warteg-bemo/index.html)
 
 ### Preview 1
 ![image](https://github.com/abdanzamzam/warteg-bemo/blob/main/Screenshot%201.png)
